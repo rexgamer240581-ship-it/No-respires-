@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Respires - Experiencia Inmersiva</title>
+    <style>
+        /* Estilo general para la atmósfera de la película */
+        body {
+            background-color: #050505;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            color: #eee;
+        }
+
+        .contenedor {
+            width: 500px;
+            height: auto;
+            /* Fondo principal: Casa tétrica similar a la de la película */
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1512132147213-90992850904a?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #222;
+            padding: 20px;
+            box-shadow: 0 0 50px #4a0000;
+            position: relative;
+        }
+
+        /* La Marquesina Solicitada */
+        .alerta-marquesina {
+            background: #4a0000;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border: 2px solid #800;
+            display: block;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            font-size: 10px;
+            border: 1px solid #333;
+            padding: 6px 10px;
+            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.7);
+        }
+
+        nav a:hover {
+            background: #ff0000;
+            color: #fff;
+            box-shadow: 0 0 10px #ff0000;
+            border-color: #ff0000;
+        }
+
+        .imagenes {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .imagenes img {
+            width: 100%;
+            height: 85px;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.5) brightness(0.6);
+            border: 1px solid #444;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            background-color: #111;
+        }
+
+        .imagenes img:hover {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+            transform: scale(1.1);
+            border-color: #ff0000;
+            z-index: 10;
+        }
+
+        .cuadro {
+            width: 100%;
+            padding: 15px;
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px dashed #4a0000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-style: italic;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        /* Sección XP: Ojo del hombre ciego en la oscuridad */
+        .seccion-xp {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1544435033-24070e67886d?q=80&w=600&auto=format&fit=crop');
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px #000;
+            letter-spacing: 4px;
+            border: 1px solid #333;
+            text-transform: uppercase;
+        }
+
+        iframe {
+            border: 2px solid #1a1a1a;
+            width: 100%;
+            height: 160px;
+            filter: grayscale(1) invert(1) contrast(1.2) opacity(0.4);
+            transition: opacity 0.5s;
+        }
+
+        iframe:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    
+    <marquee class="alerta-marquesina" scrollamount="12">
+        ESTÁ ESCUCHANDO... NO TE MUEVAS... NO HAGAS RUIDO... NO RESPIRES...
+    </marquee>
+
+    <nav>
+        <a href="#">EXPEDIENTE</a>
+        <a href="#">VÍCTIMAS</a>
+        <a href="#">LA CASA</a>
+        <a href="#">INTRUSOS</a>
+        <a href="#">ESCAPE</a>
+    </nav>
+
+    <div class="imagenes">
+        <!-- 1. El Hombre Ciego (Representado por la oscuridad acechante) -->
+        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=200&h=200&fit=crop" alt="Peligro oculto">
+        <!-- 2. Rottweiler rabioso -->
+        <img src="https://images.unsplash.com/photo-1563294315-97816223a41b?w=200&h=200&fit=crop" alt="Perro guardián">
+        <!-- 3. Herramientas de robo -->
+        <img src="https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?w=200&h=200&fit=crop" alt="Herramientas">
+        <!-- 4. Pasillo de la casa abandonada -->
+        <img src="https://images.unsplash.com/photo-1471018210022-7f2878705307?w=200&h=200&fit=crop" alt="Pasillo oscuro">
+        <!-- 5. El dinero (Motivo del robo) -->
+        <img src="https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?w=200&h=200&fit=crop" alt="Dinero en efectivo">
+    </div>
+
+    <div class="cuadro">
+       "El silencio es tu única oportunidad de salir con vida de esta casa."
+    </div>
+
+    <div class="seccion-xp">
+        ZONA SIN SALIDA
+    </div>
+
+    <!-- Mapa de Detroit industrial -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11792.176472439281!2d-83.0950346!3d42.3689454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824d2970a6c6e11%3A0xc3f0b24040a46f7c!2sNorth%20End%2C%20Detroit%2C%20MI!5e0!3m2!1ses!2s!4v1700000000000!5m2!1ses!2s" loading="lazy"></iframe>
+
+</div>
+
+</body>
+</html>
